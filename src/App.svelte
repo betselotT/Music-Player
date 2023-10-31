@@ -69,16 +69,20 @@
         <div class="controls">
           <button on:click={prev}>
             <i class="fa fa-backward" />
+            <h3>Prev</h3>
           </button>
           <button on:click={playpause}>
             {#if playerState == "play"}
               <i class="fa fa-pause" />
+              <h3>Pause</h3>
             {:else}
               <i class="fa fa-play" />
+              <h3>Play</h3>
             {/if}
           </button>
           <button on:click={next}>
             <i class="fa fa-forward" />
+            <h3>Next</h3>
           </button>
         </div>
       </div>
@@ -151,6 +155,7 @@
   }
   .player .current-song .song-controls h2 {
     margin-bottom: 15px;
+    padding-left: 10px;
     font-size: 20px;
     color: #111;
   }
@@ -171,16 +176,17 @@
     height: calc(100% - 120px);
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0px 8px 32px 0 rgba(32, 38, 135, 0.2);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.4);
     overflow-y: auto;
   }
   .player .song-list::-webkit-scrollbar {
-    width: 4px;
+    width: 5px;
     background: transparent;
   }
   .player .song-list::-webkit-scrollbar-thumb {
-    width: 4px;
+    border-radius: 20px;
+    width: 5px;
     background: #fff;
   }
   .player .song-list > div {
